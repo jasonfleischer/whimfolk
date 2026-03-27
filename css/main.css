@@ -51,6 +51,7 @@ body {
 
 .video-wrapper {
   display: flex;
+  background: #111;
   justify-content: center;
 }
 .video-wrapper video {
