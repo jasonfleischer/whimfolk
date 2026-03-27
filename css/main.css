@@ -51,11 +51,11 @@ body {
 
 .video-wrapper {
   display: flex;
-  background: #111;
   justify-content: center;
 }
 .video-wrapper video {
   width: 100%;
+  background: #111;
 }
 
 #contact {
