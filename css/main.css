@@ -3,6 +3,12 @@ body {
   font-family: Verdana, sans-serif;
 }
 
+@media screen and (max-width:1000px) {
+  .hide_mobile { 
+    display: none; 
+  }
+}
+
 .w3-content {
     max-width: 811px;
 }
