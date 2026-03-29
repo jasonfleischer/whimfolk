@@ -1,4 +1,9 @@
+html {
+  background: #000;
+}
+
 body {
+  background: #FFF;
   margin: 0;
   font-family: Verdana, sans-serif;
 }
@@ -58,27 +63,31 @@ body {
   background: #111;
 }
 
+.material-icons {
+  font-size: 18px;
+}
+
 #contact {
   text-align: center;
   line-height: 2;
   font-size: 1rem;
   color: #222;
 }
-.contact-btn {
+
+button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background: #111;
   color: #fff;
   border: none;
-  padding: 12px 24px;
+  padding: 12px 16px 12px 16px;
   border-radius: 8px;
   font-size: 0.9rem;
   letter-spacing: 0.08em;
   cursor: pointer;
-  margin-top: 12px;
 }
-.contact-btn:hover {
+button:hover {
   background: #333;
 }
 

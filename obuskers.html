@@ -9,6 +9,16 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="css/main.css">
+  <style>
+        button {
+          padding: 8px 16px 8px 12px;
+        }
+        .video-text {
+          height: 65px; 
+          align-items:center; 
+          justify-content: space-between;
+        }
+    </style>
 </head>
 <body>
 
@@ -27,7 +37,13 @@
         Your browser does not support the video tag.
       </video>
     </div>
-    <h4>For What It's Worth - Buffalo Springfield</h4>
+    <div class="w3-flex video-text">
+      <h4>For What It's Worth - Buffalo Springfield</h4>
+      <button onclick="handleURLDownload(event, 'vids/ForWhatItsWorth480p.mov')">
+        <i class="material-icons">file_download</i>
+        Download
+      </button>
+    </div>
   </div>
 
   <div class="w3-container w3-padding-32">
@@ -37,7 +53,13 @@
         Your browser does not support the video tag.
       </video>
     </div>
-    <h4>Where is my Mind - Pixies</h4>
+    <div class="w3-flex video-text">
+      <h4>Where is my Mind - Pixies</h4>
+      <button onclick="handleGDriveDownload(event, '10SU2k13kcQkReT0GSWrvnhgwWxRf7MtQ')">
+        <i class="material-icons">file_download</i>
+        Download
+      </button>
+    </div>
   </div>
 
    <div class="w3-container w3-padding-32">
@@ -47,7 +69,13 @@
         Your browser does not support the video tag.
       </video>
     </div>
-    <h4>You Ain't Seen Nothing Yet - BTO</h4>
+    <div class="w3-flex video-text">
+      <h4>You Ain't Seen Nothing Yet - BTO</h4>
+      <button onclick="handleURLDownload(event, 'vids/YouAintSeenNothingYet480p.mov')">
+        <i class="material-icons">file_download</i>
+        Download
+      </button>
+    </div>
   </div>
   <br>
   <br>
@@ -58,4 +86,19 @@
 </footer>
 
 </body>
+
+<script>
+  function handleURLDownload(e, downloadUrl) {
+    const link = document.createElement('a');
+    link.href = downloadUrl;    
+    link.target = '_blank'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+  function handleGDriveDownload(e, fileId) {
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    handleURLDownload(e, downloadUrl);
+  }
+</script>
 </html>
