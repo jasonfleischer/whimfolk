@@ -41,6 +41,30 @@ body {
   max-width: 660px;
 }
 
+.hero-small {
+  position: relative;
+  width: 100%;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.hero-bg-small {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-logo-small {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 360px;
+}
+
 .member h4 {
   position: absolute;
   bottom: 0;
